@@ -1,8 +1,8 @@
 <template>
     <i-navbar id="navbar" :collapse="false">
         <i-navbar-brand :to="{ name: 'index' }">
-            <img class="logo -dark" src="/images/logo-80.png" height="26" alt="Inkline - Vue.js UI/UX Library">
-            <img class="logo -light" src="/images/logo-light-80.png" height="26" alt="Inkline - Vue.js UI/UX Library">
+            <img class="logo -dark" src="~/assets/images/logo.svg" height="26" alt="Inkline - Vue.js UI/UX Library">
+            <img class="logo -light" src="~/assets/images/logo-light.svg" height="26" alt="Inkline - Vue.js UI/UX Library">
             Inkline
         </i-navbar-brand>
 

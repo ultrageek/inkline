@@ -1,10 +1,10 @@
 <template>
     <div class="site-search">
-        <i-dropdown ref="dropdown" placement="bottom-start" :disabled="searchString === ''" :keymap="searchKeymap">
+        <i-dropdown ref="dropdown" :class="{ '-empty': searchString === '' }" placement="bottom-start" :keymap="searchKeymap">
             <i-input v-model="searchString" type="search" placeholder="Search">
                 <font-awesome-icon slot="prefix" icon="search" />
             </i-input>
-            <i-dropdown-menu v-show="searchString !== ''">
+            <i-dropdown-menu>
                 <div class="body">
                     <div v-if="searchResults.length === 0 && searchString !== ''">
                         <i-dropdown-item>
@@ -235,6 +235,12 @@ export default {
 
 .site-search {
     margin: 0 $spacer;
+
+    .dropdown.-empty {
+        .menu {
+            visibility: hidden;
+        }
+    }
 
     .menu {
         width: 520px;

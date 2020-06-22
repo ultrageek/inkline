@@ -113,7 +113,9 @@ export default {
         // Doc: https://github.com/nuxt-community/stylelint-module
         '@nuxtjs/stylelint-module',
         // Doc: https://github.com/nuxt-community/gtm-module
-        '@nuxtjs/gtm'
+        '@nuxtjs/gtm',
+        // Doc: https://github.com/aceforth/nuxt-optimized-images
+        '@aceforth/nuxt-optimized-images'
     ],
 
     /**
@@ -123,6 +125,15 @@ export default {
     gtm: {
         id: 'GTM-KD44VC3',
         pageTracking: true
+    },
+
+    /**
+     * Image optimization configuration
+     * See https://github.com/aceforth/nuxt-optimized-images
+     */
+    optimizedImages: {
+        optimizeImages: true,
+        optimizeImagesInDev: true
     },
 
     /*

@@ -8,7 +8,8 @@
                 </h2>
                 <div class="header-buttons _margin-top-2">
                     <i-button size="lg" variant="primary" class="_margin-right-md-2" :to="{ name: 'docs-introduction-getting-started' }">Get Started</i-button>
-                    <github-button class="github-star-button" href="https://github.com/inkline/inkline"
+                    <github-button class="github-star-button"
+                                   href="https://github.com/inkline/inkline"
                                    data-size="large"
                                    data-show-count="true"
                                    aria-label="Star inkline/inkline on GitHub">
@@ -76,9 +77,13 @@
                 <i-column lg="4">
                     <nuxt-link class="feature-box-link" :to="{ name: 'docs-components-datatable-introduction' }">
                         <i-card class="feature-box">
-                            <img class="image -responsive" slot="image"
-                                 src="/images/pages/index-data-components.jpg"
-                                 alt="Inkline - Vue.js UI/UX Library - Data Components" />
+                            <picture slot="image">
+                                <source :srcSet="require('~/static/images/pages/index-data-components.jpg?webp')" type="image/webp" />
+                                <source :srcSet="require('~/static/images/pages/index-data-components.jpg')" type="image/jpeg" />
+                                <img class="image -responsive"
+                                     :src="require('~/static/images/pages/index-data-components.jpg')"
+                                     alt="Inkline - Vue.js UI/UX Library - Data Components" />
+                            </picture>
                             <h3>Data Components</h3>
                             <p>Use Inkline's Data Tables to add advanced interaction controls to your tables.</p>
                         </i-card>
@@ -87,9 +92,13 @@
                 <i-column lg="4">
                     <nuxt-link class="feature-box-link" :to="{ name: 'docs-forms-validation-introduction' }">
                         <i-card class="feature-box">
-                            <img class="image -responsive" slot="image"
-                                 src="/images/pages/index-form-validation.jpg"
-                                 alt="Inkline - Vue.js UI/UX Library - Form Validation" />
+                            <picture slot="image">
+                                <source :srcSet="require('~/static/images/pages/index-form-validation.jpg?webp')" type="image/webp" />
+                                <source :srcSet="require('~/static/images/pages/index-form-validation.jpg')" type="image/jpeg" />
+                                <img class="image -responsive"
+                                     :src="require('~/static/images/pages/index-form-validation.jpg')"
+                                     alt="Inkline - Vue.js UI/UX Library - Form Validation" />
+                            </picture>
                             <h3>Form Validation</h3>
                             <p>Define a form validation schema and let Inkline take care of the form validation work.</p>
                         </i-card>
@@ -98,9 +107,13 @@
                 <i-column lg="4">
                     <nuxt-link class="feature-box-link" :to="{ name: 'docs-utilities-color' }">
                         <i-card class="feature-box">
-                            <img class="image -responsive" slot="image"
-                                 src="/images/pages/index-utility-classes.jpg"
-                                 alt="Inkline - Vue.js UI/UX Library - Utility Classes" />
+                            <picture slot="image">
+                                <source :srcSet="require('~/static/images/pages/index-utility-classes.jpg?webp')" type="image/webp" />
+                                <source :srcSet="require('~/static/images/pages/index-utility-classes.jpg')" type="image/jpeg" />
+                                <img class="image -responsive"
+                                     :src="require('~/static/images/pages/index-utility-classes.jpg')"
+                                     alt="Inkline - Vue.js UI/UX Library - Utility Classes" />
+                            </picture>
                             <h3>Utility Classes</h3>
                             <p>Use hundreds of utility classes when you need more control over your components.</p>
                         </i-card>
@@ -156,7 +169,7 @@
                         <i-tooltip variant="light">
                             <a id="osawards-container" href="https://osawards.com/vue/" rel="nofollow">
                                 <h4>OS Awards</h4>
-                                <img class="_margin-auto" width="200" src="/images/pages/osawards.svg" alt="Open Source Awards - Vue.js London 2019 - Inkline Nominee" />
+                                <img class="_margin-auto" width="200" :src="require('~/static/images/pages/osawards.svg')" alt="Open Source Awards - Vue.js London 2019 - Inkline Nominee" />
                             </a>
                             <template slot="body">
                                 <p class="_text-center _margin-0 _padding-1">
